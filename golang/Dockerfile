@@ -1,4 +1,4 @@
-FROM golang:1.17
+FROM golang:1.18.2
 
 LABEL maintainer="Ving <ving@nivin.cn>"
 
