@@ -20,13 +20,13 @@ services:
     ports:
       - 8888:8081
     volumes:
-      - ${DATA_PATH_HOST}/nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/conf.d:/etc/nginx/conf.d
       - ${DATA_PATH_HOST}/nginx/log:/var/log/nginx
     networks:
       - backend
     depends_on:
       - golang
-      
+
   golang:                                # 自定义容器名称
     build:
       context: ./golang                  # 指定构建使用的 Dockerfile 文件
